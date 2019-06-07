@@ -1,0 +1,19 @@
+docker run -d\ --name graphite\ --restart=always\ -p 80:80\ -p 2003-2004:2003-2004\ -p 2023-2024:2023-2024\ -p 8125:8125/udp\ -p 8126:8126\ graphiteapp/graphite-statsd
+
+docker build -t sb-audit-service .
+
+docker run -d --name test -p 8080-8081:8080-8081 sb-audit-service
+
+docker run -d --name db -p 8091:8091 -p 11210:11210 couchbase
+
+docker images 
+docker network ls
+docker inspect 16
+docker-machine ls
+docker run -d --name couchdb -p 9091-9094:8091-8094 -p 11211:11210 couchbase
+docker rm couchdb
+docker pull couchbase
+docker logs test
+docker ps -a
+docker build -t sb-audit-service .
+docker pull openjdk:8-jdk-alpine
