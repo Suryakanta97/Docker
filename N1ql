@@ -1,0 +1,20 @@
+CREATE INDEX `Index_OA_OALS_OAL_OLK` ON `LWS_ORDER_AUDIT`((distinct (array (`v`.`OrderLineKey`) for `v` in ((`OrderAudit`.`OrderAuditLevels`).`OrderAuditLevel`) end)))
+
+CREATE INDEX `Index_OA_OALS_OAL_OLKey` ON `LWS_ORDER_AUDIT`((distinct (array (`v`.`OrderAuditLevelKey`) for `v` in ((`OrderAudit`.`OrderAuditLevels`).`OrderAuditLevel`) end)))
+CREATE INDEX `Index_OA_OHK` ON `LWS_ORDER_AUDIT`((`OrderAudit`.`OrderHeaderKey`))
+
+
+CREATE INDEX `Index_OA_OALS_OAL_OLKey` ON `LWS_ORDER_AUDIT`((distinct (array (`v`.`OrderAuditLevelKey`) for `v` in ((`OrderAudit`.`OrderAuditLevels`).`OrderAuditLevel`) end)))
+
+
+CREATE INDEX `Index_OA_OAK` ON `LWS_ORDER_AUDIT`((`OrderAudit`.`OrderAuditKey`))
+
+CREATE INDEX `Index_OA_OALS_OAL_OLK` ON `LWS_ORDER_AUDIT`((distinct (array (`v`.`OrderLineKey`) for `v` in ((`OrderAudit`.`OrderAuditLevels`).`OrderAuditLevel`) end)))
+
+CREATE INDEX `Index_OA_OALS_OAL_OLK` ON `LWS_ORDER_AUDIT`((distinct (array (`v`.`OrderLineKey`) for `v` in ((`OrderAudit`.`OrderAuditLevels`).`OrderAuditLevel`) end)))
+
+CREATE INDEX `Index_OA_OHK` ON `LWS_ORDER_AUDIT`((`OrderAudit`.`OrderHeaderKey`))
+
+
+
+
